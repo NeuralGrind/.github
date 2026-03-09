@@ -1,0 +1,42 @@
+name: Bug
+description: Report a defect
+type: Bug
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: repro-steps
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - API
+        - Angular Web
+        - MAUI Mobile
+        - Shared/Infra
+        - Database
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Blocks usage
+        - Major — feature impaired
+        - Minor — cosmetic or workaround exists
