@@ -1,0 +1,43 @@
+name: Backlog Item
+description: A shippable increment of user-facing value within a Feature
+type: Backlog Item
+body:
+  - type: markdown
+    attributes:
+      value: "## Backlog Item"
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: Describe the outcome from the user's perspective
+      placeholder: "As a [user], I can [action] so that [benefit]"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Specific, testable conditions that must be met
+      value: |
+        - [ ] Given... When... Then...
+        - [ ] Given... When... Then...
+    validations:
+      required: true
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical Notes
+      description: |
+        Data models, API request/response shapes, UI wireframe notes,
+        or references to existing patterns. This context helps when
+        breaking this item down into Tasks for agent handoff.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Primary Component
+      options:
+        - API
+        - Angular Web
+        - MAUI Mobile
+        - Shared/Infra
+        - Database
